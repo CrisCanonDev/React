@@ -2,8 +2,8 @@ import { useState } from "react";
 
 //adding parameter to reuse components (Props)
 //   Using special prop children  (Inner text)
-export function TwitterCardBox({ user, children}) {
-    const [following, setFollowing] = useState(false);
+export function TwitterCardBox({ user, children, initialState }) {
+    const [following, setFollowing] = useState(initialState);
 
     const handleClick = () => {
         setFollowing(!following)
@@ -17,7 +17,7 @@ export function TwitterCardBox({ user, children}) {
         : 'tw-followCard-button';
 
     return (
-        <article className="tw-followCard">
+        < article className = "tw-followCard" >
             <header className="tw-followCard-header">
                 <img
                     className="tw-followCard-avatar"
@@ -34,6 +34,6 @@ export function TwitterCardBox({ user, children}) {
                     {textButton}
                 </button>
             </aside>
-        </article>
+        </article >
     )
 }
