@@ -9,14 +9,23 @@ import { checkWinner, checkEndGame } from './boardLogic.js'
 
 
 function App() {
-  const [turn, setTurn] = useState(TURNS.X)
-  const [board, setBoard] = useState(Array(9).fill(null))
+  const [board, setBoard] = useState(() => {
+    const boardFromLocalStorage = window.localStorage.getItem('board')
+    return boardFromLocalStorage ? JSON.parse(boardFromLocalStorage) : Array(9).fill(null)
+  })
+  const [turn, setTurn] = useState(() => {
+    const turnFromLocalStorage = window.localStorage.getItem('turn')
+    return turnFromLocalStorage ?? TURNS.X
+  })
+
+
+
   const [winner, setWinner] = useState(null)
 
 
 
   const resetGame = () => {
-    setBoard(Array(9).fill(null))
+    setBoard((Array(9).fill(null)))
     setTurn(TURNS.X)
     setWinner(null)
   }
@@ -34,6 +43,10 @@ function App() {
     const newTurn = turn === TURNS.X ? TURNS.O : TURNS.X //Change turn
     setTurn(newTurn);
 
+    //Save game
+    window.localStorage.setItem('board', JSON.stringify(newBoard))
+    window.localStorage.setItem('turn', newTurn)
+
     const newWinner = checkWinner(newBoard)
     if (newWinner) {
       setWinner(newWinner)
@@ -45,6 +58,7 @@ function App() {
   return (
     <main className='board'>
       <h1 >TIC TAC TOE</h1>
+      <button onClick={resetGame}>Reset Game</button>
       <section className='game'>
         {
           board.map((square, index) => {
@@ -54,7 +68,6 @@ function App() {
                 index={index}
                 updateBoard={updateBoard} //Function passed to execute it when is clicked, not when rendered
               >
-
                 {square}
               </Square>
             )
