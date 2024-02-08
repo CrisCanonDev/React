@@ -58,6 +58,10 @@ body {
   color: #222;
 }
 
+.board h1 {
+  margin-bottom: 50px;
+}
+
 .board .game {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
