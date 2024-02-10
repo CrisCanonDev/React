@@ -10,6 +10,7 @@ It will notify who has won or not and a button to reset game.<br>
 By using localStorage, it will keep the current grid game status via storing in the DOM.
 
 ### Game snapshots
-![Project1](../resources/project01a.png)
---
-![Project2](../resources/project01b.png)
+<div style="display:flex; justify-content:space-around;">
+<img src="../resources/project01a.png" alt="drawing" style="width:250px; flex-direction: row;"/>
+<img src="../resources/project01c.png" alt="drawing" style="width:250px;"/>
+<img src="../resources/project01b.png" alt="drawing" style="width:250px;"/>
