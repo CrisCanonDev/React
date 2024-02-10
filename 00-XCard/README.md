@@ -1,4 +1,4 @@
-#  [X Card](link)
+# X Follow Card [Link](link)
 
 This react application is made of and reviews react topic as components, functions, props, hooks (useState).
 
