@@ -1,8 +1,15 @@
-# React + Vite
+# TIC TAC TOE [Link](websitelink)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This react application is made of react topic as components, functions, props, hooks (useState), localStorage, terniary usage, array manipulation, among other functionalities.
 
-Currently, two official plugins are available:
+## Overview
+Recreation of a Tic Tac Toe game. <br>
+Once a square is clicked, the inner value is updated and the turn changes.
+It detects if there is a winner (if a player get 3 of marks in a row) or not.
+It will notify who has won or not and a button to reset game.<br>
+By using localStorage, it will keep the current grid game status via storing in the DOM.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Game snapshots
+![Project1](../resources/project01a.png)
+--
+![Project2](../resources/project01b.png)
