@@ -1,8 +1,8 @@
-# React + Vite
+#  [X Card](link)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This react application is made of and reviews react topic as components, functions, props, hooks (useState).
 
-Currently, two official plugins are available:
+## Overview
+Works similarly as X Card when X recommends you some account to follow. This application handle onclick function to update button inner content, style and update it dinamically via useState hook.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![Project](../resources/project00.png)
