@@ -1,8 +1,9 @@
-# React + Vite
+# MOUSE FOLLOW [Link](websitelink)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+This react application implements a new hook, useEffect, once a certain (or not) prop is update. This application use the useState hook modifying its value, and useEfeect to execute code after render. 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Overview
+Once a the activate/deactive button is clicked, a boolean state variable swaps its value.
+Then, by using useEffect invokes the callback for adding and event listener by the boolean state as dependence.
+It transforms position once the enable button is activate and not when is deactivate.
